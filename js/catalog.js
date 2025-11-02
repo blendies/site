@@ -21,8 +21,18 @@ function filterGallery() {
         if (isVisible) visibleCount++;
     });
 
-    document.getElementById('noitem').style.display = visibleCount === 0 ? "block" : "none";
-
+    gallerytext = document.getElementById('gallerytext')
+    if (visibleCount === 0) {
+        gallerytext.textContent = 'no items here...';
+        gallerytext.classList.remove('py-3');
+        gallerytext.classList.add('py-5');
+    }
+    else {
+        gallerytext.textContent = 'select picture for more information...';
+        gallerytext.classList.remove('py-5');
+        gallerytext.classList.add('py-3');
+    }
+    
     updateActiveButtons('.material-filter', selectedMaterial);
     updateActiveButtons('.type-filter', selectedType);
     updateActiveButtons('.status-filter', selectedStatus);    
