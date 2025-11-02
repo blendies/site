@@ -46,9 +46,7 @@
 
     <!-- Header Title -->
      <img src="../images/creation1.png" alt="About Us" class="img-fluid" />
-    <!-- <div class="container">
-        <div class="section-title fw-bold">OUR CREATIONS</div>
-    </div> -->
+    <!-- <div class="container"><div class="section-title fw-bold">OUR CREATIONS</div></div> -->
 
     <!-- Material Filters -->
     <div class="container text-center my-4">
@@ -56,6 +54,7 @@
         <button class="btn btn-outline-dark material-filter m-1" data-material="clay">Clay</button>
         <button class="btn btn-outline-dark material-filter m-1" data-material="plastic">Plastic</button>
         <button class="btn btn-outline-dark material-filter m-1" data-material="wood">Wood</button>
+        <button class="btn btn-outline-dark material-filter m-1" data-material="crochet">Crochet</button>
     </div>
 
     <!-- Item Type Filters -->
@@ -74,10 +73,17 @@
         <button class="btn btn-outline-secondary type-filter m-1" data-type="tray">Trinket Trays</button>
     </div>
 
+    <!-- Status Filters -->
+    <div class="container text-center my-4">
+        <button class="btn btn-outline-secondary btn-turquoise status-filter m-1 active" data-status="not">All Statuses</button>
+        <button class="btn btn-outline-secondary btn-turquoise status-filter m-1" data-status="available">Available</button>
+    </div>
+
     <!-- Image Grid -->
     <div class="container">
+        <div class="fs-5 text-center fst-italic py-5" id="noitem">No Items Here...</div>
         <div class="row g-2">
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Duck Rest"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Duck Rest" data-status="not" 
             data-img="../images/catalog/rest-duck1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, Food Safe Epoxy Resin <br><br>
                         <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span> <br><br>
@@ -88,7 +94,7 @@
             >
                 <img src="../images/catalog/rest-duck1.png" alt="duck rest" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray coaster" data-title="Beach Coaster"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray coaster" data-title="Beach Coaster" data-status="not"
             data-img="../images/catalog/tray-beach2.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin, Decorative Sand<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -98,7 +104,7 @@
             >
                 <img src="../images/catalog/tray-beach2.png" alt="beach tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Cloud Rest"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Cloud Rest" data-status="not"
             data-img="../images/catalog/rest-cloud1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -109,7 +115,7 @@
             >
                 <img src="../images/catalog/rest-cloud1.png" alt="cloud rest" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Bird Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Bird Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-bird2.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -120,7 +126,7 @@
             >
                 <img src="../images/catalog/tray-bird2.png" alt="bird tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Duck Phone Holder"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Duck Phone Holder" data-status="not"
             data-img="../images/catalog/phone-duck1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -130,7 +136,7 @@
             >
                 <img src="../images/catalog/phone-duck1.png" alt="duck phone holder" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Egg Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Egg Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-egg1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -141,7 +147,7 @@
             >
                 <img src="../images/catalog/tray-egg1.png" alt="duck phone holder" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Whale Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Whale Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-whale1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -152,7 +158,7 @@
             >
                 <img src="../images/catalog/tray-whale1.png" alt="whale trinket tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Calcifer Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Calcifer Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-calcifer1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -163,7 +169,7 @@
             >
                 <img src="../images/catalog/tray-calcifer1.png" alt="calcifer trinket tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="magnet" data-title="Tabasco Magnet"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="magnet" data-title="Tabasco Magnet" data-status="not available"
             data-img="../images/catalog/magnet-tabasco1.png"
             data-description="<br>Medium: Light Weight Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -173,7 +179,7 @@
             >
                 <img src="../images/catalog/magnet-tabasco1.png" alt="tabasco magnet" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="magnet" data-title="Pizza Magnet"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="magnet" data-title="Pizza Magnet" data-status="not available"
             data-img="../images/catalog/magnet-pizza1.png"
             data-description="<br>Medium: Light Weight Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -183,7 +189,7 @@
             >
                 <img src="../images/catalog/magnet-pizza1.png" alt="pizza magnet" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Cat Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Cat Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-cat1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -194,7 +200,7 @@
             >
                 <img src="../images/catalog/tray-cat1.png" alt="cat tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="keychain" data-title="Star Sign Keychain Series"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="keychain" data-title="Star Sign Keychain Series" data-status="not available"
             data-img="../images/catalog/key-star-series.png"
             data-description="<br>Medium: Plastic, Marker, UV Resin <br><br>
                         <ul>Details:
@@ -218,7 +224,7 @@
             >
                 <img src="../images/catalog/key-star-series.png" alt="star sign keychain series" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Chilli Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Chilli Trinket Tray" data-status="not available"
             data-img="../images/catalog/tray-chilli1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -229,7 +235,7 @@
             >
                 <img src="../images/catalog/tray-chilli1.png" alt="chilli trinket tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Frying Pan Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Frying Pan Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-pan1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -240,7 +246,7 @@
             >
                 <img src="../images/catalog/tray-pan1.png" alt="pan trinket tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Toast Trinket Tray"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="tray" data-title="Toast Trinket Tray" data-status="not"
             data-img="../images/catalog/tray-toast1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -251,7 +257,7 @@
             >
                 <img src="../images/catalog/tray-toast1.png" alt="toast trinket tray" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="trinket" data-title="Cwazy Chicken Series"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="trinket" data-title="Cwazy Chicken Series" data-status="not available"
             data-img="../images/catalog/trinket-chicken1.png"
             data-description="<br><br>Medium: Air Dry Clay, Acrylic Paint, UV Resin <br><br>
                         <ul>Details:
@@ -272,7 +278,7 @@
             >
                 <img src="../images/catalog/trinket-chicken1.png" alt="cwazy chicken series" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Genre Dice"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Genre Dice" data-status="not available"
             data-img="../images/catalog/dice-genre.png"
             data-description="<br>Medium: Pyrography<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -282,7 +288,7 @@
             >
                 <img src="../images/catalog/dice-genre.png" alt="genre dice" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Answer Dice"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Answer Dice" data-status="not available"
             data-img="../images/catalog/dice-answer.png"
             data-description="<br>Medium: Pyrography<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -292,7 +298,7 @@
             >
                 <img src="../images/catalog/dice-answer.png" alt="answer dice" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Drink Dice"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Drink Dice" data-status="not available"
             data-img="../images/catalog/dice-drink.png"
             data-description="<br>Medium: Pyrography<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -302,7 +308,7 @@
             >
                 <img src="../images/catalog/dice-drink.png" alt="drink dice" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Food Dice"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="dice" data-title="Food Dice" data-status="not"
             data-img="../images/catalog/dice-food.png"
             data-description="<br>Medium: Pyrography<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-danger'>SOLD</span></span><br><br>
@@ -312,7 +318,7 @@
             >
                 <img src="../images/catalog/dice-food.png" alt="food dice" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Chinese Zodiac Chopstick Rest Series"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="rest" data-title="Chinese Zodiac Chopstick Rest Series" data-status="not available"
             data-img="../images/catalog/rest-zodiac-series.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin <br><br>
                         <ul>Details:
@@ -337,7 +343,7 @@
             >
                 <img src="../images/catalog/rest-zodiac-series.png" alt="chinese zodiac rest series" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="pen" data-title="Chinese Character [筆] Pen"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="wood" data-type="pen" data-title="Chinese Character [筆] Pen" data-status="not available"
             data-img="../images/catalog/pen-chinese1.png"
             data-description="<br>Medium: Pyrography<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -347,7 +353,7 @@
             >
                 <img src="../images/catalog/pen-chinese1.png" alt="chinese character pen" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Koala Phone Holder"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Koala Phone Holder" data-status="not available"
             data-img="../images/catalog/phone-koala1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -357,7 +363,7 @@
             >
                 <img src="../images/catalog/phone-koala1.png" alt="koala phone holder" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Whale Phone Holder"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Whale Phone Holder" data-status="not available"
             data-img="../images/catalog/phone-whale1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -367,7 +373,7 @@
             >
                 <img src="../images/catalog/phone-whale1.png" alt="whale phone holder" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Pig Phone Holder"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="clay" data-type="phone" data-title="Pig Phone Holder" data-status="not available"
             data-img="../images/catalog/phone-pig1.png"
             data-description="<br>Medium: Air Dry Clay, Acrylic Paint, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -377,7 +383,7 @@
             >
                 <img src="../images/catalog/phone-pig1.png" alt="pig phone holder" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="earring" data-title="Rabbit Hypoallergenic Earrings"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="earring" data-title="Rabbit Hypoallergenic Earrings" data-status="not available"
             data-img="../images/catalog/earring-bunny1.png"
             data-description="<br>Medium: Plastic, Pencil, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>
@@ -387,7 +393,7 @@
             >
                 <img src="../images/catalog/earring-bunny1.png" alt="bunny earring" data-bs-toggle="modal" data-bs-target="#galleryModal" class="img-fluid img-thumb border rounded" loading="lazy"/>
             </div>
-            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="earring" data-title="Ghost Cat Hypoallergenic Earrings"
+            <div class="gallery-item col-6 col-md-4 col-lg-2" data-material="plastic" data-type="earring" data-title="Ghost Cat Hypoallergenic Earrings" data-status="not available"
             data-img="../images/catalog/earrring-ghost-cat.png"
             data-description="<br>Medium: Plastic, Pencil, UV Resin<br><br>
                               <span class='fs-5'>Current Status: <span class='fw-bold text-success'>AVAILABLE</span></span><br><br>

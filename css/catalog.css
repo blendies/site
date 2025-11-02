@@ -8,3 +8,7 @@
     height: 700px;
 }
 
+#noitem {
+  display: none;
+}
+
