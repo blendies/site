@@ -44,6 +44,7 @@ function filterTypeButtonFilters() {
             el.style.display = 'inline-block';
         });
         // document.querySelector('[data-type="all"]').style.display = "inline-block";
+        // document.querySelector('[data-type="bag"]').style.display = "inline-block";
         // document.querySelector('[data-type="board"]').style.display = "inline-block";
         // document.querySelector('[data-type="coaster"]').style.display = "inline-block";
         // document.querySelector('[data-type="dice"]').style.display = "inline-block";
@@ -92,6 +93,7 @@ function filterTypeButtonFilters() {
             el.style.display = 'none';
         });
         document.querySelector('[data-type="all"]').style.display = "inline-block";
+        document.querySelector('[data-type="bag"]').style.display = "inline-block";
         document.querySelector('[data-type="coaster"]').style.display = "inline-block";
         document.querySelector('[data-type="keychain"]').style.display = "inline-block";
     }   
@@ -128,25 +130,53 @@ document.querySelectorAll('.status-filter').forEach(btn => {
 
 /** Dynamic Modal Content **/
 document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-        const parent = img.closest('.gallery-item');
-        const title = parent.dataset.title;
-        const imgSrc = parent.dataset.img;
-        const description = parent.dataset.description;
-        const size = parent.dataset.size || "lg";
+  img.addEventListener('click', () => {
+    const parent = img.closest('.gallery-item');
+    const title = parent.dataset.title;
+    const description = parent.dataset.description;
+    const size = parent.dataset.size || "lg";
 
-        // Update modal content
-        document.getElementById('galleryModalLabel').textContent = title;
-        document.getElementById('modalImage').src = imgSrc;
-        document.getElementById('modalImage').alt = title;
-        document.getElementById('modalDescription').innerHTML = description;
+    // Parse image sources (comma-separated or JSON array)
+    let imgSrc = parent.dataset.img;
+    let images = imgSrc.includes(',') ? imgSrc.split(',') : [imgSrc];
 
-        // Update modal size class
-        const modal_dialog = document.getElementById('galleryModalDialog');
-        modal_dialog.classList.remove('modal-lg', 'modal-xl');
-        modal_dialog.classList.add(`modal-${size}`);
-        const modal_img = document.getElementById('modalImage');
-        modal_img.classList.remove('popup-img-lg', 'popup-img-xl');
-        modal_img.classList.add(`popup-img-${size}`);
-    });
+    // Update modal title and description
+    document.getElementById('galleryModalLabel').textContent = title;
+    document.getElementById('modalDescription').innerHTML = description;
+
+    // Update modal size
+    const modal_dialog = document.getElementById('galleryModalDialog');
+    modal_dialog.classList.remove('modal-lg', 'modal-xl');
+    modal_dialog.classList.add(`modal-${size}`);
+
+    // Build image or carousel
+    const container = document.getElementById('modalImageContainer');
+    if (images.length === 1) {
+      container.innerHTML = `<img src="${images[0].trim()}" alt="${title}" class="img-fluid border rounded popup-img-${size}" />`;
+    } 
+    else {
+      const indicators = images.map((_, i) =>
+        `<button type="button" data-bs-target="#modalCarousel" data-bs-slide-to="${i}" ${i === 0 ? 'class="active"' : ''} aria-label="Slide ${i + 1}"></button>`
+      ).join('');
+
+      const slides = images.map((src, i) =>
+        `<div class="carousel-item ${i === 0 ? 'active' : ''}">
+          <img src="${images[i].trim()}" class="d-block w-100 border rounded popup-img-${size}" alt="${title} ${i + 1}" />
+        </div>`
+      ).join('');
+
+      container.innerHTML = `
+        <div id="modalCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">${indicators}</div>
+          <div class="carousel-inner">${slides}</div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#modalCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      `;
+    }
+  });
 });
