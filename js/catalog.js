@@ -44,7 +44,7 @@ function filterTypeButtonFilters() {
             el.style.display = 'inline-block';
         });
         // document.querySelector('[data-type="all"]').style.display = "inline-block";
-        // document.querySelector('[data-type="bag"]').style.display = "inline-block";
+        // document.querySelector('[data-type="charm"]').style.display = "inline-block";
         // document.querySelector('[data-type="board"]').style.display = "inline-block";
         // document.querySelector('[data-type="coaster"]').style.display = "inline-block";
         // document.querySelector('[data-type="dice"]').style.display = "inline-block";
@@ -74,6 +74,7 @@ function filterTypeButtonFilters() {
             el.style.display = 'none';
         });
         document.querySelector('[data-type="all"]').style.display = "inline-block";
+        document.querySelector('[data-type="charm"]').style.display = "inline-block";
         document.querySelector('[data-type="earring"]').style.display = "inline-block";
         document.querySelector('[data-type="keychain"]').style.display = "inline-block";
     }
@@ -93,7 +94,7 @@ function filterTypeButtonFilters() {
             el.style.display = 'none';
         });
         document.querySelector('[data-type="all"]').style.display = "inline-block";
-        document.querySelector('[data-type="bag"]').style.display = "inline-block";
+        document.querySelector('[data-type="charm"]').style.display = "inline-block";
         document.querySelector('[data-type="coaster"]').style.display = "inline-block";
         document.querySelector('[data-type="keychain"]').style.display = "inline-block";
     }   
